@@ -1,7 +1,9 @@
 ## Packages Included
 
 Build: Webpack, Babel (es2015 and React), Sass loaders, webpack-dev-server
+
 Test: Mocha, Chai, Enzyme
+
 Front-end: React, React-Dom
 
 ## How to Run Things

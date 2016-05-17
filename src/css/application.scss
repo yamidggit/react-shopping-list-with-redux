@@ -1,1 +1,9 @@
-/* scss goes here */
+.item {
+    &.complete {
+        color: green;
+    }
+    
+    &.incomplete {
+        color: red;
+    }
+}
