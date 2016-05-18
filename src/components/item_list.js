@@ -7,7 +7,10 @@ export class ItemList extends React.Component {
         return (
             <div className="item-list">
                 { this.props.items.map( (i) => 
-                    <Item key={i.id} content={i.content} complete={i.complete} />
+                    <Item key={i.id} 
+                          id={i.id} 
+                          content={i.content} 
+                          complete={i.complete} />
                 )}
             </div>
         );
