@@ -1,10 +1,11 @@
 import React from 'react';
 import { expect } from 'chai';
 import { shallow } from 'enzyme';
+import { fromJS } from 'immutable';
 
 import { App } from '../../src/components/app';
 
-const state = {
+const state = fromJS({
     items: [
         {
             id: 1,
@@ -22,7 +23,7 @@ const state = {
             complete: false
         }
     ]
-};
+});
 
 describe('<App>', () => {
     describe('render()', () => {
@@ -34,6 +35,11 @@ describe('<App>', () => {
         
         it('renders name of application', () => {
             expect(wrapper).to.include.text("Test App");
+        });
+        
+        it('renders ItemListContainer', () => {
+            expect(wrapper.find('Connect(ItemList)')).to.have.length(1);
+            
         });
     });
 });
